@@ -1,0 +1,15 @@
+python3 run_clip.py \
+--output_dir ./clip-roberta-finetuned \
+--model_name_or_path ./clip-roberta \
+--data_dir ./images \
+--train_file train.csv \
+--validation_file test.csv \
+--image_column image_path \
+--caption_column caption \
+--remove_unused_columns=False \
+--do_train  --do_eval \
+--per_device_train_batch_size="64" \
+--per_device_eval_batch_size="64" \
+--learning_rate="5e-5" --warmup_steps="0" --weight_decay 0.1 \
+--overwrite_output_dir \
+--dataloader_drop_last

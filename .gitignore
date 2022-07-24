@@ -1,0 +1,6 @@
+images/
+clip-roberta/
+clip-roberta-finetuned/
+*.zip
+.DS_Store
+
